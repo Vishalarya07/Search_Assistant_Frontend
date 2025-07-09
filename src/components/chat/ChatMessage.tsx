@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Bot, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import ReactMarkdown from 'react-markdown';
 
 interface ChatMessageProps {
   message: {
@@ -59,7 +60,11 @@ export const ChatMessage = ({ message, isAnimating = false }: ChatMessageProps) 
           : "bg-ai-message text-ai-message-foreground border border-glass-border"
       )}>
         <div className="whitespace-pre-wrap break-words">
-          {displayedContent}
+          {message.isUser ? (
+            displayedContent
+          ) : (
+            <ReactMarkdown>{displayedContent}</ReactMarkdown>
+          )}
           {isTyping && (
             <span className="inline-block w-2 h-5 bg-primary-glow ml-1 animate-pulse" />
           )}

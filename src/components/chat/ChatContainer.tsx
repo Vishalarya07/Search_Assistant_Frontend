@@ -104,8 +104,8 @@ export const ChatContainer = () => {
             <Sparkles className="w-5 h-5 text-primary-foreground" />
           </div>
           <div>
-            <h1 className="text-lg font-semibold text-foreground">AI Assistant</h1>
-            <p className="text-sm text-muted-foreground">Powered by your backend</p>
+            <h1 className="text-lg font-semibold text-foreground">Bhumi's Assistant</h1>
+            <p className="text-sm text-muted-foreground">Powered by your Baby</p>
           </div>
         </div>
         
