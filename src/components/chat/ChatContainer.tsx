@@ -22,7 +22,7 @@ export const ChatContainer = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: "Hello! I'm your AI assistant. How can I help you today?",
+      content: "Hello! I'm Bhumi's AI assistant. How can I help you today?",
       isUser: false,
       timestamp: new Date()
     }
@@ -54,7 +54,7 @@ export const ChatContainer = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8081/api/search', { query });
+      const response = await axios.post('https://searchassistantbackend-production.up.railway.app/api/search', { query });
       
       const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
