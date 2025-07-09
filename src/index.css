@@ -2,39 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* AI Chat Interface Design System - Modern & Intuitive
+All colors MUST be HSL for proper theming.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - Modern dark theme */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Chat interface specific colors */
+    --chat-background: 240 10% 3.9%;
+    --chat-surface: 240 10% 8%;
+    --chat-surface-hover: 240 9% 12%;
+    
+    /* Message bubbles */
+    --user-message: 262 83% 58%;
+    --user-message-foreground: 0 0% 98%;
+    --ai-message: 240 10% 8%;
+    --ai-message-foreground: 0 0% 95%;
+    
+    /* Accent colors */
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 262 83% 65%;
+    
+    /* Glass morphism */
+    --glass-background: 240 10% 8% / 0.7;
+    --glass-border: 0 0% 100% / 0.1;
+    
+    /* Interactive elements */
+    --input-background: 240 10% 8%;
+    --input-border: 0 0% 100% / 0.15;
+    --input-focus: 262 83% 58%;
+    
+    /* Status colors */
+    --success: 142 71% 45%;
+    --error: 0 84% 60%;
+    --warning: 38 92% 50%;
+    --info: 199 89% 48%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 83% 65%));
+    --gradient-surface: linear-gradient(135deg, hsl(240 10% 8%), hsl(240 10% 12%));
+    --gradient-glow: radial-gradient(circle at center, hsl(262 83% 58% / 0.3), transparent 70%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(262 83% 58% / 0.3);
+    --shadow-message: 0 4px 20px hsl(240 10% 3% / 0.3);
+    --shadow-input: 0 8px 32px hsl(240 10% 3% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Legacy system colors for compatibility */
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 95%;
+    --secondary: 240 10% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 0.15;
+    --input: 240 10% 8%;
+    --ring: 262 83% 58%;
 
     --radius: 0.5rem;
 
