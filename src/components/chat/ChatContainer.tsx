@@ -22,7 +22,7 @@ export const ChatContainer = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: "Hello! I'm Bhumi's AI assistant. How can I help you today?",
+      content: "Hello! I'm Search assistant. How can I help you today?",
       isUser: false,
       timestamp: new Date()
     }
@@ -104,8 +104,8 @@ export const ChatContainer = () => {
             <Sparkles className="w-5 h-5 text-primary-foreground" />
           </div>
           <div>
-            <h1 className="text-lg font-semibold text-foreground">Bhumi's Assistant</h1>
-            <p className="text-sm text-muted-foreground">Powered by your Baby</p>
+            <h1 className="text-lg font-semibold text-foreground">Search Assistant</h1>
+            <p className="text-sm text-muted-foreground">Powered by Vishal</p>
           </div>
         </div>
         
