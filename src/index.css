@@ -141,3 +141,7 @@ All colors MUST be HSL for proper theming.
     @apply bg-background text-foreground;
   }
 }
+
+.hide-dialog-close button.absolute.right-4.top-4 {
+  display: none !important;
+}

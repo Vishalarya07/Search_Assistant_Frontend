@@ -73,8 +73,10 @@ export const ChatContainer = () => {
       });
 
     } catch (err: any) {
-      const errorMessage = err.response?.data || 'Error connecting to backend';
-      
+      let errorMessage = err.response?.data || 'Error connecting to backend';
+      if (typeof errorMessage === 'object') {
+        errorMessage = JSON.stringify(errorMessage, null, 2);
+      }
       const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
         content: `Sorry, I encountered an error: ${errorMessage}`,
@@ -132,9 +134,8 @@ export const ChatContainer = () => {
               isAnimating={message.id === lastMessageId && !message.isUser}
             />
           ))}
-          
+          {/* Show TypingIndicator only in chat area when loading */}
           {isLoading && <TypingIndicator />}
-          
           <div ref={messagesEndRef} />
         </div>
       </div>
